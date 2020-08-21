@@ -1,0 +1,590 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>QuantumSafe 量子安全實驗室</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="assets/img/favicon.png">
+
+    <!-- ***** All CSS Files ***** -->
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<style type="text/css">
+
+
+/*
+* Noto Sans TC (Chinese_traditional) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf) format('opentype');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
+  font-display: fallback;
+}
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 400;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+  font-display: fallback;
+ }
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 500;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Medium.otf) format('opentype');
+  font-display: fallback;
+ }
+@font-face {
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format('opentype');
+  font-display: fallback;
+ }
+@font-face {
+   font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 900;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
+  font-display: fallback;
+ }
+
+</style>
+
+
+
+
+
+<body class="homepage-2">
+    <!--====== Preloader Area Start ======-->
+    <div class="preloader-main">
+        <div class="preloader-wapper">
+            <svg class="preloader" xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="200">
+                <defs>
+                    <filter id="goo" x="-40%" y="-40%" height="200%" width="400%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -8" result="goo" />
+                    </filter>
+                </defs>
+                <g filter="url(#goo)">
+                    <circle class="dot" cx="50" cy="50" r="25" fill="#8731E8" />
+                    <circle class="dot" cx="50" cy="50" r="25" fill="#8731E8" />
+                </g>
+            </svg>
+            <div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== Scroll To Top Area Start ======-->
+    <div id="scrollUp" title="Scroll To Top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!--====== Scroll To Top Area End ======-->
+
+    <div class="main">
+        <!-- ***** Header Start ***** -->
+        <header class="navbar navbar-sticky navbar-expand-lg navbar-dark">
+            <div class="container position-relative">
+                <a class="navbar-brand" href="index.html">
+                    <img class="navbar-brand-regular" src="assets/img/logo/logo.png" alt="brand-logo">
+                    <img class="navbar-brand-sticky" src="assets/img/logo/logo.png" alt="sticky brand-logo">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-inner">
+                    <!--  Mobile Menu Toggler -->
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="navbarToggler" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav>
+                        <ul class="navbar-nav" id="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#home">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#features">產品特色</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#benefits">技術優勢</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#use">使用教學</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#faq">常見問題</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#group">專業團隊</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link scroll" href="#contact">聯絡我們</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- ***** Header End ***** -->
+
+        <!-- ***** Welcome Area Start ***** -->
+        <section id="home" class="section welcome-area bg-inherit h-100vh overflow-hidden">
+            <div class="shapes-container">
+                <div class="bg-shape"></div>
+            </div>
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <!-- Welcome Intro Start -->
+                    <div class="col-12 col-md-7">
+                        <div class="welcome-intro">
+                            <h1>革命性防偽技術解決方案QuantumSafe™，比傳統方式更便宜有效。</h1>
+                            <p class="my-4">您製造的優質產品，再也不需擔心被仿冒。結合動態QR code與NFC感應科技與先進的抗量子加密演算法(post-quantum cryptography)，您的每一件產品將擁有獨一無二的指紋。輕輕一掃，假貨無所遁形，就是這麼簡單！</p>
+                            <a href="#features" class="btn">進一步了解</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <!-- Welcome Thumb -->
+                        <div class="welcome-thumb" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                            <img src="assets/img/features/thumb-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Welcome Area End ***** -->
+
+        <!-- ***** Features Area Start ***** -->
+        <section id="features" class="section features-area ptb_100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-6">
+                        <!-- Section Heading -->
+                        <div class="section-heading text-center">
+                            <h2>先進。安全。簡單</h2>
+                            <p class="d-none d-sm-block mt-4">QuantumSafe™的六大特點，讓產品防偽技術提升到更高層級。不只安全，更要易於使用。讓消費者上手容易，廠商易於追蹤控管。</p>
+                            <p class="d-block d-sm-none mt-4">QuantumSafe™的六大特點，讓產品防偽技術提升到更高層級。不只安全，更要易於使用。讓消費者上手容易，廠商易於追蹤控管。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- Icon Box -->
+                        <div class="icon-box text-center p-4 wow fadeInUp" data-wow-duration="2s">
+                            <!-- Featured Icon -->
+                            <div class="featured-icon mb-3">
+                                <span class="flaticon-tap"></span>
+                            </div>
+                            <!-- Icon Text -->
+                            <div class="icon-text">
+                                <h3 class="mb-2">隨手掃描</h3>
+                                <p>不須預載任何APP，拿起手機輕鬆掃描後即可確認產品真偽。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- Icon Box -->
+                        <div class="icon-box text-center p-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                            <!-- Featured Icon -->
+                            <div class="featured-icon mb-3">
+                                <span class="flaticon-fingerprint"></span>
+                            </div>
+                            <!-- Icon Text -->
+                            <div class="icon-text">
+                                <h3 class="mb-2">獨一無二</h3>
+                                <p>每個商品內建一組如指紋般無法偽造的QR code或感應晶片，讓假貨無所遁形。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- Icon Box -->
+                        <div class="icon-box text-center p-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
+                            <!-- Featured Icon -->
+                            <div class="featured-icon mb-3">
+                                <span class="flaticon-notification"></span>
+                            </div>
+                            <!-- Icon Text -->
+                            <div class="icon-text">
+                                <h3 class="mb-2">紀錄追蹤</h3>
+                                <p>每次掃描後，皆會根據時間戳記留下紀錄，協助使用者驗證產品真偽。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- Icon Box -->
+                        <div class="icon-box text-center p-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
+                            <!-- Featured Icon -->
+                            <div class="featured-icon mb-3">
+                                <span class="flaticon-place"></span>
+                            </div>
+                            <!-- Icon Text -->
+                            <div class="icon-text">
+                                <h3 class="mb-2">抗量子加密演算法</h3>
+                                <p>QuantumSafe™基於尖端科技的抗量子密碼學，嚴格的保證產品安全，讓仿冒者寸步難行。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- Icon Box -->
+                        <div class="icon-box text-center p-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.8s">
+                            <!-- Featured Icon -->
+                            <div class="featured-icon mb-3">
+                                <span class="flaticon-settings"></span>
+                            </div>
+                            <!-- Icon Text -->
+                            <div class="icon-text">
+                                <h3 class="mb-2">多樣客製化選項</h3>
+                                <p>您可以自由決定消費者接收到的資訊，依據產品定位，為您量身打造專屬認證。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- Icon Box -->
+                        <div class="icon-box text-center p-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+                            <!-- Featured Icon -->
+                            <div class="featured-icon mb-3">
+                                <span class="flaticon-language"></span>
+                            </div>
+                            <!-- Icon Text -->
+                            <div class="icon-text">
+                                <h3 class="mb-2">支援多國語系</h3>
+                                <p>內建多種語言，世界通用，為您的產品提供更強的國際競爭力。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Features Area End ***** -->
+
+        <!-- ***** Discover Area Start ***** -->
+        <section id="benefits" class="section discover-area bg-gray overflow-hidden ptb_100">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-12 col-lg-6 order-2 order-lg-1">
+                        <!-- Discover Thumb -->
+                        <div class="service-thumb discover-thumb mx-auto text-center">
+                            <img src="assets/img/discover/thumb-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 order-1 order-lg-2">
+                        <!-- Discover Text -->
+                        <div class="discover-text px-0 px-lg-4 pt-4 pt-lg-0">
+                            <h2 class="pb-4">讓QuantumSafe™保護您的產品</h2>
+                            <!-- Check List -->
+                            <ul class="check-list">
+                                <li class="py-1">
+                                    <!-- List Box -->
+                                    <div class="list-box media">
+                                        <span class="icon align-self-start"><i class="fas fa-check"></i></span>
+                                        <span class="media-body pl-2"><h3>更低成本</h3>傳統的防偽貼紙利用物理工藝，如光線變化、粗細程度，研發生產耗時傷財。QuantumSafe™採用雲端辨識技術，您僅需將我們提供的QR code置於產品包裝內，不需其他成本。</span>
+                                    </div>
+                                </li>
+
+                                <li class="py-1">
+                                    <!-- List Box -->
+                                    <div class="list-box media">
+                                        <span class="icon align-self-start"><i class="fas fa-check"></i></span>
+                                        <span class="media-body pl-2"><h3>最高安全</h3>QuantumSafe™使用最先進的抗量子加密技術，任何不肖工廠都無法破解或仿冒您用心製造的產品。</span>
+                                    </div>
+                                </li>
+                                <li class="py-1">
+                                    <!-- List Box -->
+                                    <div class="list-box media">
+                                        <span class="icon align-self-start"><i class="fas fa-check"></i></span>
+                                        <span class="media-body pl-2"><h3>方便使用</h3>消費者只需掃描QR code，網頁上就可即時查詢產品真偽及相關登入紀錄資訊，方便快速、任何人都能輕易上手，無須您教導消費者如何辨識真品。</span>
+                                    </div>
+                                </li>
+                                <li class="py-1">
+                                    <!-- List Box -->
+                                    <div class="list-box media">
+                                        <span class="icon align-self-start"><i class="fas fa-check"></i></span>
+                                        <span class="media-body pl-2"><h3>無須維護</h3>QuantumSafe™隨時監控伺服器，即時更新，永不出錯。您只要專注於生產優良產品，把與仿冒者的戰爭放心交給我們！</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Discover Area End ***** -->
+
+        <!-- ***** Work Area Start ***** -->
+        <section id="use" class="section work-area bg-overlay overflow-hidden ptb_100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-6">
+                        <!-- Work Content -->
+                        <div class="work-content text-center">
+                            <h2 class="text-white">如何使用？超簡單！</h2>
+                            <p class="text-white my-3 mt-sm-4 mb-sm-5">QuantumSafe™防偽技術不須預載任何手機APP，僅需掃描QR code即可確認產品真偽。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <!-- Single Work -->
+                        <div class="single-work text-center p-3">
+                            <!-- Work Icon -->
+                            <div class="work-icon">
+                                <img class="avatar-md" src="assets/img/icon/work/download.png" alt="">
+                            </div>
+                            <h3 class="text-white py-3">掃描QR Code</h3>
+                            <p class="text-white">用智慧型手機掃描置於產品包裝內的QR Code。</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!-- Single Work -->
+                        <div class="single-work text-center p-3">
+                            <!-- Work Icon -->
+                            <div class="work-icon">
+                                <img class="avatar-md" src="assets/img/icon/work/settings.png" alt="">
+                            </div>
+                            <h3 class="text-white py-3">點擊確認鍵</h3>
+                            <p class="text-white">確認連入正牌QuantumSafe™的認證網站。</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!-- Single Work -->
+                        <div class="single-work text-center p-3">
+                            <!-- Work Icon -->
+                            <div class="work-icon">
+                                <img class="avatar-md" src="assets/img/icon/work/app.png" alt="">
+                            </div>
+                            <h3 class="text-white py-3">立即檢驗真偽</h3>
+                            <p class="text-white">QuantumSafe™便會立即回傳產品驗證的資訊！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Work Area End ***** -->
+
+        <!-- ***** FAQ Area Start ***** -->
+        <section id="faq" class="section faq-area ptb_100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-7">
+                        <!-- Section Heading -->
+                        <div class="section-heading text-center">
+                            <h2 class="text-capitalize">常見問題</h2>
+                            <p class="d-none d-sm-block mt-4">如有任何其他疑問，歡迎直接與我們聯繫。</p>
+                            <p class="d-block d-sm-none mt-4">如有任何其他疑問，歡迎直接與我們聯繫。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <!-- FAQ Content -->
+                        <div class="faq-content">
+                            <!-- sApp Accordion -->
+                            <div class="accordion" id="sApp-accordion">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-md-10 col-lg-8">
+                                        <!-- Single Accordion Item -->
+                                        <div class="card border-top-0 border-left-0 border-right-0 border-bottom">
+                                            <!-- Card Header -->
+                                            <div class="card-header bg-inherit border-0 p-0">
+                                                <h2 class="mb-0">
+                                                    <button class="btn px-0 py-3" type="button" data-toggle="collapse" data-target="#collapseOne">
+                                                        如何看到本產品實際運作？
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseOne" class="collapse show" data-parent="#sApp-accordion">
+                                                <!-- Card Body -->
+                                                <div class="card-body px-0 py-3">
+                                                    請直接聯絡我們，將由團隊成員至貴公司實際展示說明，讓您了解為何QuantumSafe™如何方便的使用。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Accordion Item -->
+                                        <div class="card border-top-0 border-left-0 border-right-0 border-bottom">
+                                            <!-- Card Header -->
+                                            <div class="card-header bg-inherit border-0 p-0">
+                                                <h2 class="mb-0">
+                                                    <button class="btn collapsed px-0 py-3" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                                                        你們的產品真的安全嗎？
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" data-parent="#sApp-accordion">
+                                                <!-- Card Body -->
+                                                <div class="card-body px-0 py-3">
+                                                    QuantumSafe™經過長時間實測，並有嚴格的密碼學及演算法證明安全性，若需要將可聯絡團隊成員為您詳細解說背後原理，請放心使用。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Accordion Item -->
+                                        <div class="card border-top-0 border-left-0 border-right-0 border-bottom">
+                                            <!-- Card Header -->
+                                            <div class="card-header bg-inherit border-0 p-0">
+                                                <h2 class="mb-0">
+                                                    <button class="btn collapsed px-0 py-3" type="button" data-toggle="collapse" data-target="#collapseThree">
+                                                        是否有免費試用？
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" data-parent="#sApp-accordion">
+                                                <!-- Card Body -->
+                                                <div class="card-body px-0 py-3">
+                                                    在疫情的特殊時期，我們將免費提供口罩國家隊使用！杜絕仿冒口罩，一同為國民的健康把關。其他廠商業者也歡迎與我們聯絡，我們都將提供免費試用，一起將MIT的品牌推向世界。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Accordion Item -->
+                                        <div class="card border-top-0 border-left-0 border-right-0 border-bottom">
+                                            <!-- Card Header -->
+                                            <div class="card-header bg-inherit border-0 p-0">
+                                                <h2 class="mb-0">
+                                                    <button class="btn collapsed px-0 py-3" type="button" data-toggle="collapse" data-target="#collapseFour">
+                                                        如何得到產品支援？
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseFour" class="collapse" data-parent="#sApp-accordion">
+                                                <!-- Card Body -->
+                                                <div class="card-body px-0 py-3">
+                                                    請直接聯絡我們，任何問題都將由團隊成員為您解決！
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** FAQ Area End ***** -->
+
+        <!-- ***** Subscribe Area Start ***** -->
+        <section id="group" class="section subscribe-area ptb_100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-7">
+                        <div class="subscribe-content text-center">
+                            <h3>QuantumSafe量子安全實驗室</h3>
+                            <p class="my-4">QuantumSafe量子安全實驗室為台大及歐美頂尖大學合作的新創團隊，所有的成員都是專精於密碼學、資訊安全、保密科學與量子計算的專家。我們提供提供生醫、醫療、保健食品、化妝品、奢侈品等革命性防偽與保密服務。</p>
+                            <!-- Subscribe Form -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Subscribe Area End ***** -->
+
+        <!--====== Contact Area Start ======-->
+        <section id="contact" class="contact-area bg-gray ptb_100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-6">
+                        <!-- Section Heading -->
+                        <div class="section-heading text-center">
+                            <h2 class="text-capitalize">聯絡我們</h2>
+                            <p class="d-none d-sm-block mt-4">如果您對我們的服務有任何興趣或疑問，歡迎利用以下的連結方式聯絡我們：</p>
+                            <p class="d-block d-sm-none mt-4">如果您對我們的服務有任何興趣或疑問，歡迎利用以下的連結方式聯絡我們：</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-12 col-md-5">
+                        <!-- Contact Us -->
+                        <div class="contact-us">
+                            <p class="mb-3"></p>
+                            <ul>
+                                <li class="py-2">
+                                    <a class="media" href="#">
+                                        <div class="social-icon mr-3">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                        <span class="media-body align-self-center">台北市中正區忠孝西路一段72號2樓</span>
+                                    </a>
+                                </li>
+                                <li class="py-2">
+                                    <a class="media" href="#">
+                                        <div class="social-icon mr-3">
+                                            <i class="fas fa-phone-alt"></i>
+                                        </div>
+                                        <span class="media-body align-self-center">+886-2-5578-4246</span>
+                                    </a>
+                                </li>
+                                <li class="py-2">
+                                    <a class="media" href="#">
+                                        <div class="social-icon mr-3">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <span class="media-body align-self-center">service@quantumsafe.dev</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== Contact Area End ======-->
+<div class="copyright-right">&copy; Copyrights 2020 QuantumSafe™. All rights reserved.</div>
+
+    </div>
+
+
+    <!-- ***** All jQuery Plugins ***** -->
+
+    <!-- jQuery(necessary for all JavaScript plugins) -->
+    <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="assets/js/bootstrap/popper.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Plugins js -->
+    <script src="assets/js/plugins/plugins.min.js"></script>
+
+    <!-- Active js -->
+    <script src="assets/js/active.js"></script>
+</body>
+
+</html>
